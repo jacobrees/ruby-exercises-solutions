@@ -21,10 +21,10 @@ Each folder in this repository is a set of related exercises. Open up the folder
 This repository of exercises is one of the best tools you've got to learn Ruby. Every minute spent here is time _very_ well spent. 
 
 * Week 1
-  * data-types - [ ]
+  * data-types - [x]
     * strings (start here!!!) [video walk-through](https://youtu.be/aeAkLxr5diE) - [x]
     * ints_and_floats - [x]
-    * collections/arrays [video walk-through](https://youtu.be/RUnd1Uu0AyE) - [ ]
+    * collections/arrays [video walk-through](https://youtu.be/RUnd1Uu0AyE) - [x]
   * initialize - [ ]
     * aardvark - [ ]
     * beaver - [ ]
