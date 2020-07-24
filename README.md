@@ -13,10 +13,6 @@ Each folder in this repository is a set of related exercises. Open up the folder
 - Each exercise file within the folder will begin with comments providing more detail on:
   1. How you need to manipulate or work with this file to complete the exercise.
   2. Some exercises will require you to manipulate the "current" file and run it. Other exercises will require you to create _new_ files and then reference those files for the "current" file to work.
-  
-If you're new here, watch this getting-started video. We'll install the ruby-exercises directory, figure out how to get set up to practice some `ruby`, and then we'll work through the _complete_ full exercises:
-
-[![Intro to ruby-exercises and strings.rb (YouTube)](/images/embedded-video-screenshot-getting-started.jpg)](https://youtu.be/aeAkLxr5diE)
 
 ----------------------------------
 
