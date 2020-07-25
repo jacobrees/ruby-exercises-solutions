@@ -2,29 +2,15 @@
 
 > This repo is for my own personal practice and is a clone of https://github.com/turingschool/ruby-exercises containing my own progress and solutions. Thank You Turing School for creating this.
 
-This is a collection of exercises to practice various aspects of Ruby. 
-
-Practicing in this manner (small, bite-sized problems that you can do repeatedly) is a _fantastic_ way to solidify programming concepts. 
-
-Each folder in this repository is a set of related exercises. Open up the folder and read the README to learn more about them.
-
-## Structure of this repository
-- Each folder contains a `README.md` file that provides a summary of what skills you will develop with these exercises
-- Each exercise file within the folder will begin with comments providing more detail on:
-  1. How you need to manipulate or work with this file to complete the exercise.
-  2. Some exercises will require you to manipulate the "current" file and run it. Other exercises will require you to create _new_ files and then reference those files for the "current" file to work.
-
-----------------------------------
-
 ## Suggested order
 
 This repository of exercises is one of the best tools you've got to learn Ruby. Every minute spent here is time _very_ well spent. 
 
 * Week 1
-  * data-types - [ ]
+  * data-types - [x]
     * strings (start here!!!) [video walk-through](https://youtu.be/aeAkLxr5diE) - [x]
     * ints_and_floats - [x]
-    * collections/arrays [video walk-through](https://youtu.be/RUnd1Uu0AyE) - [ ]
+    * collections/arrays [video walk-through](https://youtu.be/RUnd1Uu0AyE) - [x]
   * initialize - [ ]
     * aardvark - [ ]
     * beaver - [ ]
