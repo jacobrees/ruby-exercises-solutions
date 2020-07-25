@@ -1,6 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/pride'
-require './lib/groundhog'
+require '../lib/groundhog'
 
 class GroundhogTest < Minitest::Test
   def test_it_exists

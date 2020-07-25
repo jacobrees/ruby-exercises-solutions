@@ -1,6 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/pride'
-require './lib/iguana'
+require '../lib/iguana'
 
 class IguanaTest < Minitest::Test
   def test_it_exists
