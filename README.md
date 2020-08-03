@@ -34,7 +34,7 @@ This repository of exercises is one of the best tools you've got to learn Ruby. 
 
 * Week 2
   * data-types/collections/hashes.rb - [x]
-  * objects-and-methods/exercise-1 - [ ]
+  * objects-and-methods/exercise-1 - [x]
   * mythical-creatures - [ ]
     * Hobbit [video walk-through](https://youtu.be/uYGS-DCNR-0) - [ ]
     * Pirate - [ ]
