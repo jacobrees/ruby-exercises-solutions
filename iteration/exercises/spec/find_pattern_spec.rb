@@ -1,5 +1,4 @@
 RSpec.describe 'find pattern' do
-
   it 'test 1' do
     ages = [39, 45, 29, 24, 50]
     younger_than_thirty = nil
@@ -79,19 +78,19 @@ RSpec.describe 'find pattern' do
   end
 
   xit 'test 7' do
-    people = ["Willie", "Carmen Sandiego", "Bryan", "Faith", "Zac"]
+    people = ['Willie', 'Carmen Sandiego', 'Bryan', 'Faith', 'Zac']
     # Your Code Here
 
-    expect(carmen).to eq("Carmen Sandiego")
+    expect(carmen).to eq('Carmen Sandiego')
   end
 
   xit 'test 8' do
     places = {
-      Bangkok: "Willie",
-      Santa_Fe: "Carmen Sandiego",
-      Rome: "Bryan",
-      Munich: "Faith",
-      Mogudishu: "Zac"
+      Bangkok: 'Willie',
+      Santa_Fe: 'Carmen Sandiego',
+      Rome: 'Bryan',
+      Munich: 'Faith',
+      Mogudishu: 'Zac'
     }
     # Your Code Here
 
@@ -107,11 +106,11 @@ RSpec.describe 'find pattern' do
 
   xit 'test 10' do
     purchases = {
-      "shoes" => :paid,
-      "backpack" => :paid,
-      "books" => :pending,
-      "posters" => :paid,
-      "food" => :pending
+      'shoes' => :paid,
+      'backpack' => :paid,
+      'books' => :pending,
+      'posters' => :paid,
+      'food' => :pending
     }
     # Your Code Here
 
@@ -120,14 +119,14 @@ RSpec.describe 'find pattern' do
 
   xit 'test 11' do
     purchases = {
-      "shoes" => :paid,
-      "backpack" => :paid,
-      "books" => :pending,
-      "posters" => :paid,
-      "food" => :pending
+      'shoes' => :paid,
+      'backpack' => :paid,
+      'books' => :pending,
+      'posters' => :paid,
+      'food' => :pending
     }
     # Your Code Here
 
-    expect(starts_with_b).to eq("backpack")
+    expect(starts_with_b).to eq('backpack')
   end
 end

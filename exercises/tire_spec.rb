@@ -14,6 +14,4 @@ RSpec.describe Tire do
     tire.blow_out
     expect(tire.flat?).to be true
   end
-
 end
-

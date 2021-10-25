@@ -23,7 +23,7 @@ RSpec.describe Direwolf do
   end
 
   it 'can have another home and be another size' do
-    wolf = Direwolf.new('Shaggydog', "Winterfell", "Smol Pupper")
+    wolf = Direwolf.new('Shaggydog', 'Winterfell', 'Smol Pupper')
 
     expect(wolf.name).to eq('Shaggydog')
     expect(wolf.home).to eq('Winterfell')
@@ -64,8 +64,8 @@ RSpec.describe Direwolf do
   end
 
   it 'can only protect two Starks at a time' do
-    summer_wolf = Direwolf.new('Summer', "Winterfell")
-    lady_wolf = Direwolf.new('Lady', "Winterfell")
+    summer_wolf = Direwolf.new('Summer', 'Winterfell')
+    lady_wolf = Direwolf.new('Lady', 'Winterfell')
     sansa_stark = Stark.new('Sansa')
     john_stark = Stark.new('Jon')
     rob_stark = Stark.new('Rob')
@@ -93,7 +93,7 @@ RSpec.describe Direwolf do
   end
 
   it 'protects the Starks' do
-    wolf = Direwolf.new('Nymeria', "Winterfell")
+    wolf = Direwolf.new('Nymeria', 'Winterfell')
     arya_stark = Stark.new('Arya')
     sansa_stark = Stark.new('Sansa')
 
@@ -110,7 +110,7 @@ RSpec.describe Direwolf do
   end
 
   it 'will not hunt white walkers when protecting Starks' do
-    wolf = Direwolf.new('Nymeria', "Winterfell")
+    wolf = Direwolf.new('Nymeria', 'Winterfell')
     arya_stark = Stark.new('Arya')
 
     wolf.protects(arya_stark)
@@ -119,8 +119,8 @@ RSpec.describe Direwolf do
   end
 
   it 'can leave and stop protecting Starks' do
-    summer_wolf = Direwolf.new('Summer', "Winterfell")
-    lady_wolf = Direwolf.new('Lady', "Winterfell")
+    summer_wolf = Direwolf.new('Summer', 'Winterfell')
+    lady_wolf = Direwolf.new('Lady', 'Winterfell')
     sansa_stark = Stark.new('Sansa')
     arya_stark = Stark.new('Arya')
 
@@ -134,8 +134,8 @@ RSpec.describe Direwolf do
   end
 
   it 'returns the Stark object when it leaves' do
-    summer_wolf = Direwolf.new('Summer', "Winterfell")
-    lady_wolf = Direwolf.new('Lady', "Winterfell")
+    summer_wolf = Direwolf.new('Summer', 'Winterfell')
+    lady_wolf = Direwolf.new('Lady', 'Winterfell')
     sansa_stark = Stark.new('Sansa')
     arya_stark = Stark.new('Arya')
     rickon_stark = Stark.new('Rickon')
@@ -148,5 +148,4 @@ RSpec.describe Direwolf do
 
     expect(expected.name).to eq('Rickon')
   end
-
 end

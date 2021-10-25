@@ -1,9 +1,7 @@
 RSpec.describe 'all test' do
   it 'test all zeroes' do
     numbers = [0, 0, 0, 0, 0, 0, 0]
-    all_zeros = numbers.all? do |number|
-      number.zero?
-    end
+    all_zeros = numbers.all?(&:zero?)
     expect(all_zeros).to eq(true)
   end
 
@@ -16,31 +14,31 @@ RSpec.describe 'all test' do
   end
 
   xit 'all gone' do
-    words = ["gone", "gone", "gone", "gone", "gone", "gone", "gone"]
+    words = %w[gone gone gone gone gone gone gone]
     # Your code goes here
     expect(all_gone).to eq(true)
   end
 
   xit 'not all gone' do
-    words = ["gone", "gone", "gone", "gone", "gone", "there", "gone", "gone"]
+    words = %w[gone gone gone gone gone there gone gone]
     # Your code goes here
     expect(all_gone).to eq(false)
   end
 
   xit 'all empty' do
-    strings = ["", "", "", "", "", "", ""]
+    strings = ['', '', '', '', '', '', '']
     # Your code goes here
     expect(all_empty).to eq(true)
   end
 
   xit 'not all empty' do
-    strings = ["", "", "", "full", "", "", ""]
+    strings = ['', '', '', 'full', '', '', '']
     # Your code goes here
     expect(all_empty).to eq(false)
   end
 
   xit 'not all uppercase' do
-    words = ["DOUGHNUT", "CASH", "MAIN", "bOWl", "SMACK", "SAND"]
+    words = %w[DOUGHNUT CASH MAIN bOWl SMACK SAND]
     # Your code goes here
     expect(all_uppercase).to eq(false)
   end
@@ -64,7 +62,7 @@ RSpec.describe 'all test' do
   end
 
   xit 'all four letter words' do
-    words = ["love", "hate", "fire", "bird", "call"]
+    words = %w[love hate fire bird call]
     # Your code goes here
     expect(all_4_letters).to eq(true)
   end

@@ -7,4 +7,3 @@ class Unicorn
     @color == 'pink'
   end
 end
-

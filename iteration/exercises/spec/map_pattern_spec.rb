@@ -1,28 +1,27 @@
 RSpec.describe 'map pattern' do
-
   it 'test 1' do
-    names = ["alice", "bob", "charlie"]
+    names = %w[alice bob charlie]
     capitalized_names = []
     names.each do |name|
       capitalized_names << name.capitalize
     end
-    expect(capitalized_names).to eq(["Alice", "Bob", "Charlie"])
+    expect(capitalized_names).to eq(%w[Alice Bob Charlie])
   end
 
   xit 'test 2' do
     family = {
-      mother: "alice",
-      father: "bob",
-      brother: "charlie"
+      mother: 'alice',
+      father: 'bob',
+      brother: 'charlie'
     }
     capitalized_family = {}
     family.each do |relationship, name|
       capitalized_family[relationship] = name.capitalize
     end
     expected = {
-      mother: "Alice",
-      father: "Bob",
-      brother: "Charlie"
+      mother: 'Alice',
+      father: 'Bob',
+      brother: 'Charlie'
     }
     expect(capitalized_family).to eq(expected)
   end
@@ -88,21 +87,21 @@ RSpec.describe 'map pattern' do
   end
 
   xit 'test 7' do
-    names = ["alice", "bob", "charlie", "david", "eve"]
-    #Your Code Here
+    names = %w[alice bob charlie david eve]
+    # Your Code Here
 
     expect(lengths).to eq([5, 3, 7, 5, 3])
   end
 
   xit 'test 8' do
     family = {
-      mother: "alice",
-      father: "bob",
-      brother: "charlie",
-      uncle: "david",
-      sister: "eve"
+      mother: 'alice',
+      father: 'bob',
+      brother: 'charlie',
+      uncle: 'david',
+      sister: 'eve'
     }
-    #Your Code Here
+    # Your Code Here
 
     expected = {
       mother: 5,
@@ -115,30 +114,29 @@ RSpec.describe 'map pattern' do
   end
 
   xit 'test 9' do
-    names = ["alice", "bob", "charlie", "david", "eve"]
-    #Your Code Here
+    names = %w[alice bob charlie david eve]
+    # Your Code Here
 
-    expect(backwards).to eq(["ecila", "bob", "eilrahc", "divad", "eve"])
+    expect(backwards).to eq(%w[ecila bob eilrahc divad eve])
   end
 
   xit 'test 10' do
     family = {
-      mother: "alice",
-      father: "bob",
-      brother: "charlie",
-      uncle: "david",
-      sister: "eve"
+      mother: 'alice',
+      father: 'bob',
+      brother: 'charlie',
+      uncle: 'david',
+      sister: 'eve'
     }
-    #Your Code Here
+    # Your Code Here
 
     expected = {
-      mother: "ecila",
-      father: "bob",
-      brother: "eilrahc",
-      uncle: "divad",
-      sister: "eve"
+      mother: 'ecila',
+      father: 'bob',
+      brother: 'eilrahc',
+      uncle: 'divad',
+      sister: 'eve'
     }
     expect(backwards).to eq(expected)
   end
 end
-

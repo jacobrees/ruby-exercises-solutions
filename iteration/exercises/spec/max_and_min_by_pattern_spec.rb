@@ -1,13 +1,11 @@
 RSpec.describe 'max and min by pattern' do
-  it 'test 1'  do
-    numbers = [1, 100, 1000, 1000000]
+  it 'test 1' do
+    numbers = [1, 100, 1000, 1_000_000]
     greatest = numbers[0]
     numbers.each do |number|
-      if number > greatest
-        greatest = number
-      end
+      greatest = number if number > greatest
     end
-    expect(greatest).to eq(100000)
+    expect(greatest).to eq(100_000)
   end
 
   it 'test 2' do
@@ -15,41 +13,39 @@ RSpec.describe 'max and min by pattern' do
       ones: 1,
       hundreds: 100,
       thousands: 1000,
-      millions: 1000000
+      millions: 1_000_000
     }
     greatest = magnitudes[magnitudes.keys[0]]
-    magnitudes.each do |name, value|
-      if value > greatest
-        greatest = value
-      end
+    magnitudes.each do |_name, value|
+      greatest = value if value > greatest
     end
-    expect(greatest).to eq(1000000)
+    expect(greatest).to eq(1_000_000)
   end
 
   xit 'test 3' do
-    meals = ["banana", "nuts", "salad", "steak", "cake"]
+    meals = %w[banana nuts salad steak cake]
     shortest_word = meals[0]
     meals.each do |meal|
       # Your Code Here
     end
 
-    expect(shortest_word).to eq("nuts")
+    expect(shortest_word).to eq('nuts')
   end
 
   xit 'test 4' do
     meals = {
-      breakfast: "banana",
-      snack: "nuts",
-      lunch: "salad",
-      dinner: "steak",
-      dessert: "cake"
+      breakfast: 'banana',
+      snack: 'nuts',
+      lunch: 'salad',
+      dinner: 'steak',
+      dessert: 'cake'
     }
     shortest_word = meals[meals.keys.first]
     meals.each do |meal, dish|
       # Your Code Here
     end
 
-    expect(shortest_word).to eq("nuts")
+    expect(shortest_word).to eq('nuts')
   end
 
   xit 'test 5' do
@@ -91,19 +87,19 @@ RSpec.describe 'max and min by pattern' do
     }
     # Your Code Here
 
-    expected = {name: "miguel", age: 50}
+    expected = { name: 'miguel', age: 50 }
     expect(oldest).to eq(expected)
   end
 
   xit 'test 9' do
-    programmers = [["katrina", "sandi", "jim", "aaron", "desi"], ["abby", "jon", "susan"]]
+    programmers = [%w[katrina sandi jim aaron desi], %w[abby jon susan]]
     # Your Code Here
 
-    expect(fewest_programmers).to eq(["abby", "jon", "susan"])
+    expect(fewest_programmers).to eq(%w[abby jon susan])
   end
 
   xit 'test 10' do
-    programmers = {ruby: ["katrina", "sandi", "jim", "aaron", "desi"], java: ["abby", "jon", "susan"]}
+    programmers = { ruby: %w[katrina sandi jim aaron desi], java: %w[abby jon susan] }
     # Your Code Here
 
     expect(fewest_programmers).to eq(:java)

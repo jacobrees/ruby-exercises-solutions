@@ -80,5 +80,4 @@ RSpec.describe Werewolf do
   it 'a werewolf who has consumed a victim makes the victim dead' do
     # your code here
   end
-
 end

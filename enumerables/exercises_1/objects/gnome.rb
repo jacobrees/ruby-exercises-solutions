@@ -7,4 +7,3 @@ class Gnome
     @type == 'roving'
   end
 end
-

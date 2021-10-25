@@ -65,7 +65,7 @@ RSpec.describe Bag do
     bag << Candy.new('Jawbreaker')
     bag << Candy.new('Jolly Ranchers')
 
-    candy = bag.grab "Jawbreaker"
+    candy = bag.grab 'Jawbreaker'
     expect(candy.type).to eq('Jawbreaker')
   end
 
@@ -104,7 +104,3 @@ RSpec.describe Bag do
     expect(candy.type).to eq('Lifesavers')
   end
 end
-
-
-
-

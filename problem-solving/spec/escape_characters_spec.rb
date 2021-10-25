@@ -1,7 +1,6 @@
-require "./lib/escape_characters"
+require './lib/escape_characters'
 
 RSpec.describe EscapeCharacters do
-
   it 'can add quotation marks' do
     ec = EscapeCharacters.new
 

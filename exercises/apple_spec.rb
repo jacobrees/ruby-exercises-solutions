@@ -14,8 +14,7 @@ RSpec.describe Apple do
     2.times { apple.wait_a_week }
     expect(apple.ripe?).to be false
 
-    1.times { apple.wait_a_week }
+    apple.wait_a_week
     expect(apple.ripe?).to be true
   end
 end
-

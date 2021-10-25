@@ -47,5 +47,4 @@ RSpec.describe Pirate do
     # rob some ships
     # check that the pirate got 100 booty for each ship it robbed
   end
-
 end

@@ -17,8 +17,8 @@ RSpec.describe Iguana do
   it 'can set colors' do
     iguana = Iguana.new
 
-    iguana.colors = ["Green", "Red", "White"]
+    iguana.colors = %w[Green Red White]
 
-    expect(iguana.colors).to eq(["Green", "Red", "White"])
+    expect(iguana.colors).to eq(%w[Green Red White])
   end
 end

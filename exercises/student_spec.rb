@@ -59,7 +59,5 @@ RSpec.describe Student do
     student.study
 
     expect(student.grade).to eq('B')
-
   end
 end
-

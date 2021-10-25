@@ -1,15 +1,14 @@
 RSpec.describe 'find test' do
-
   it 'first seven letter word' do
-    words = ["capricious", "berry", "unicorn", "bag", "apple", "festering", "pretzel", "pencil"]
+    words = %w[capricious berry unicorn bag apple festering pretzel pencil]
     found = words.find do |word|
       word.length == 7
     end
-    expect(found).to eq("unicorn")
+    expect(found).to eq('unicorn')
   end
 
   xit 'no waldo' do
-    words = ["scarf", "sandcastle", "flag", "pretzel", "crow", "key"]
+    words = %w[scarf sandcastle flag pretzel crow key]
     found = words.find do |word|
       # Your code goes here
     end
@@ -17,13 +16,13 @@ RSpec.describe 'find test' do
   end
 
   xit 'found waldo' do
-    words = ["noise", "dog", "fair", "house", "waldo", "bucket", "fish"]
+    words = %w[noise dog fair house waldo bucket fish]
     # Your code goes here
-    expect(found).to eq("waldo")
+    expect(found).to eq('waldo')
   end
 
   xit 'no three letter words' do
-    words = ["piglet", "porridge", "bear", "blueberry"]
+    words = %w[piglet porridge bear blueberry]
     # Your code goes here
     expect(found).to eq(nil)
   end
@@ -47,15 +46,15 @@ RSpec.describe 'find test' do
   end
 
   xit 'first word starting with q' do
-    words = ["weirdo", "quill", "fast", "quaint", "quitter", "koala"]
+    words = %w[weirdo quill fast quaint quitter koala]
     # Your code goes here
-    expect(found).to eq("quill")
+    expect(found).to eq('quill')
   end
 
   xit 'first word ending with er' do
-    words = ["biggest", "pour", "blight", "finger", "pie", "border"]
+    words = %w[biggest pour blight finger pie border]
     # Your code goes here
-    expect(found).to eq("finger")
+    expect(found).to eq('finger')
   end
 
   xit 'first number greater than 20' do
@@ -64,4 +63,3 @@ RSpec.describe 'find test' do
     expect(found).to eq(21)
   end
 end
-

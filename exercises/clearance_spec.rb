@@ -25,4 +25,3 @@ RSpec.describe Clearance do
     expect(clearance.best_deal).to eq('pants')
   end
 end
-

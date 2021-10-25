@@ -3,7 +3,7 @@ RSpec.describe 'reduce pattern' do
     numbers = [32, 1, 21, 5, 81, 333]
     sum = 0
     numbers.each do |number|
-      sum = sum + number
+      sum += number
     end
     expect(sum).to eq(473)
   end
@@ -25,7 +25,7 @@ RSpec.describe 'reduce pattern' do
   end
 
   xit 'capitalizes key words in phrase' do
-    keywords = ["fish", "blue"]
+    keywords = %w[fish blue]
     phrase = 'one fish two fish red fish blue fish'
     # Your code goes here
     expect(phrase).to eq('one FISH two FISH red FISH BLUE FISH')
@@ -46,11 +46,9 @@ RSpec.describe 'reduce pattern' do
   end
 
   xit 'adds all second values together' do
-    elements = [["a", 1], ["b", 9], ["c", 21]]
+    elements = [['a', 1], ['b', 9], ['c', 21]]
     sum = 0
     # Your code goes here
     expect(sum).to eq(31)
   end
-
 end
-

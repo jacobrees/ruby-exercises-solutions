@@ -1,12 +1,9 @@
 RSpec.describe 'count pattern' do
-
   it 'test 1' do
     ages = [39, 45, 29, 24, 50]
     younger_than_thirty = 0
     ages.each do |age|
-      if age < 30
-        younger_than_thirty += 1
-      end
+      younger_than_thirty += 1 if age < 30
     end
     expect(younger_than_thirty).to eq(2)
   end
@@ -20,10 +17,8 @@ RSpec.describe 'count pattern' do
       miguel: 50
     }
     younger_than_thirty = 0
-    ages.each do |name, age|
-      if age < 30
-        younger_than_thirty += 1
-      end
+    ages.each do |_name, age|
+      younger_than_thirty += 1 if age < 30
     end
     expect(younger_than_thirty).to eq(2)
   end
@@ -77,7 +72,7 @@ RSpec.describe 'count pattern' do
   end
 
   xit 'test 7' do
-    family = ["alice", "bob", "charlie", "david", "eve"]
+    family = %w[alice bob charlie david eve]
     # Your Code Here
 
     expect(names_with_three_letters).to eq(2)
@@ -85,11 +80,11 @@ RSpec.describe 'count pattern' do
 
   xit 'test 8' do
     family = {
-      mother: "alice",
-      father: "bob",
-      brother: "charlie",
-      uncle: "david",
-      sister: "eve"
+      mother: 'alice',
+      father: 'bob',
+      brother: 'charlie',
+      uncle: 'david',
+      sister: 'eve'
     }
     # Your Code Here
 
@@ -105,11 +100,11 @@ RSpec.describe 'count pattern' do
 
   xit 'test 10' do
     prices = {
-      "shoes" => 1.0,
-      "backpack" => 3.9,
-      "books" => 5.99,
-      "posters" => 18.5,
-      "food" => 20.0
+      'shoes' => 1.0,
+      'backpack' => 3.9,
+      'books' => 5.99,
+      'posters' => 18.5,
+      'food' => 20.0
     }
     # Your Code Here
 

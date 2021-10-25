@@ -1,7 +1,6 @@
 RSpec.describe 'Count Pattern Test' do
-
   it 'counts words with an e' do
-    words = ["thing", "phone", "bark", "belt", "shoe", "bath"]
+    words = %w[thing phone bark belt shoe bath]
     tally = 0
     words.each do |word|
       tally += 1 if word.include?('e')
@@ -19,14 +18,14 @@ RSpec.describe 'Count Pattern Test' do
   end
 
   xit 'words that are uppercase' do
-    words = ["trousers", "SOCKS", "sweater", "Cap", "SHOE", "TIE"]
+    words = %w[trousers SOCKS sweater Cap SHOE TIE]
     tally = 0
     # Your code goes here
     expect(tally).to eq(3)
   end
 
   xit 'words ending in ing' do
-    words = ["thought", "brake", "shin", "juice", "trash"]
+    words = %w[thought brake shin juice trash]
     # Your code goes here
     expect(tally).to eq(0)
   end
@@ -50,9 +49,8 @@ RSpec.describe 'Count Pattern Test' do
   end
 
   xit 'four letter words' do
-    words = ["bake", "bark", "corn", "apple", "wart", "bird", "umbrella", "fart"]
+    words = %w[bake bark corn apple wart bird umbrella fart]
     # Your code goes here
     expect(tally).to eq(6)
   end
-
 end

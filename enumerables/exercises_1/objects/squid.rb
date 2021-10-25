@@ -7,4 +7,3 @@ class Squid
     @size == 'giant'
   end
 end
-

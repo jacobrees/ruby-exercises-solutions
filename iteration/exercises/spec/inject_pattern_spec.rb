@@ -1,12 +1,11 @@
 RSpec.describe 'inject pattern test' do
-
   it 'test 1' do
     numbers = [28, 12, 38, 1, 91]
     # Iterate over the numbers array defined above,
     # to find the difference of all the numbers
     difference = 0
     numbers.each do |number|
-      difference = difference - number
+      difference -= number
     end
     expect(difference).to eq(-170)
   end
@@ -22,7 +21,7 @@ RSpec.describe 'inject pattern test' do
     # to find the difference of all the values
 
     difference = 0
-    bills.each do |(category, amount)|
+    bills.each do |(_category, amount)|
       difference -= amount
     end
     expect(difference).to eq(-2262)
@@ -57,7 +56,7 @@ RSpec.describe 'inject pattern test' do
   end
 
   xit 'test 5' do
-    airlines = ["Southwest", "Delta", "United", "Frontier"]
+    airlines = %w[Southwest Delta United Frontier]
     # Iterate over the airlines array defined above to
     # create a hash with the name of the airline as the
     # key and the length of the name as the value
@@ -66,10 +65,10 @@ RSpec.describe 'inject pattern test' do
     # Your Code Here
 
     expected = {
-      "Southwest" => 9,
-      "Delta" => 5,
-      "United" => 6,
-      "Frontier" => 8
+      'Southwest' => 9,
+      'Delta' => 5,
+      'United' => 6,
+      'Frontier' => 8
     }
     expect(number_of_letters).to eq(expected)
   end
@@ -88,11 +87,11 @@ RSpec.describe 'inject pattern test' do
     toppings = []
     # Your Code Here
 
-    expect(toppings).to eq(["pepperoni", "sausage", "olives", "peppers", "onions"])
+    expect(toppings).to eq(%w[pepperoni sausage olives peppers onions])
   end
 
   xit 'test 7' do
-    elements = [["a", 1], ["b", 9], ["c", 21]]
+    elements = [['a', 1], ['b', 9], ['c', 21]]
     # Iterate over the elements array defined above
     # to find the sum of all the integers
 
@@ -153,15 +152,15 @@ RSpec.describe 'inject pattern test' do
   xit 'test 10' do
     menu = {
       empanadas: {
-        flavors: ["chicken", "potato", "steak", "veggie"],
+        flavors: %w[chicken potato steak veggie],
         gluten_free: false
       },
       scones: {
-        flavors: ["blueberry", "vanilla"],
+        flavors: %w[blueberry vanilla],
         gluten_free: false
       },
       parfaits: {
-        flavors: ["blueberry", "strawberry", "cherry"],
+        flavors: %w[blueberry strawberry cherry],
         gluten_free: true
       }
     }
@@ -171,10 +170,10 @@ RSpec.describe 'inject pattern test' do
 
     # Your Code Here
 
-    expected =  "Menu:\n"\
-                "- chicken, potato, steak, and veggie empanadas (non gluten free)\n"\
-                "- blueberry, and vanilla scones (non gluten free)\n"\
-                "- blueberry, strawberry, and cherry parfaits (gluten free)\n"
+    expected = "Menu:\n"\
+               "- chicken, potato, steak, and veggie empanadas (non gluten free)\n"\
+               "- blueberry, and vanilla scones (non gluten free)\n"\
+               "- blueberry, strawberry, and cherry parfaits (gluten free)\n"
 
     expected(printable_menu).to eq(expected)
   end

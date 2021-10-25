@@ -1,7 +1,6 @@
 RSpec.describe 'one' do
-
   it 'one more' do
-    words = ["bigger", "better", "more", "improved", "advantageous"]
+    words = %w[bigger better more improved advantageous]
     exactly_one = words.one? do |word|
       word == 'more'
     end
@@ -9,7 +8,7 @@ RSpec.describe 'one' do
   end
 
   xit 'not even one ring' do
-    ornaments = ["bracelet", "anklet", "earring"]
+    ornaments = %w[bracelet anklet earring]
     exactly_one_ring = ornaments.one? do |ornament|
       # Your code goes here
     end
@@ -17,13 +16,13 @@ RSpec.describe 'one' do
   end
 
   xit 'not just one ring' do
-    ornaments = ["bracelet", "ring", "ring", "anklet", "earring"]
+    ornaments = %w[bracelet ring ring anklet earring]
     # Your code goes here
     expect(exactly_one_ring).to eq(false)
   end
 
   xit 'one time' do
-    words = ["morning", "time", "evening", "noon", "dusk", "dawn"]
+    words = %w[morning time evening noon dusk dawn]
     # Your code goes here
     expect(exactly_one_time).to eq(true)
   end

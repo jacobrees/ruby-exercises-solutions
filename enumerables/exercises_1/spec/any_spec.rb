@@ -1,9 +1,7 @@
 RSpec.describe 'Any test' do
   it 'has at least one zero' do
     numbers = [2, 0, 9, 3, 0, 1]
-    has_zero = numbers.any? do |number|
-      number.zero?
-    end
+    has_zero = numbers.any?(&:zero?)
     expect(has_zero).to eq(true)
   end
 
@@ -16,25 +14,25 @@ RSpec.describe 'Any test' do
   end
 
   xit 'has at least one alice' do
-    names = ["Bill", "Bob", "Burton", "Alice", "Brandon"]
+    names = %w[Bill Bob Burton Alice Brandon]
     # Your code goes here
     expect(has_alice).to eq(true)
   end
 
   xit 'no alices' do
-    names = ["Chuck", "Charlene", "Cory", "Chris", "Carl"]
+    names = %w[Chuck Charlene Cory Chris Carl]
     # Your code goes here
     expect(has_alice).to eq(false)
   end
 
   xit 'has a multi word phrase' do
-    phrases = ["Sure!", "OK.", "I have no idea.", "Really?Whatever."]
+    phrases = ['Sure!', 'OK.', 'I have no idea.', 'Really?Whatever.']
     # Your code goes here
     expect(multi_word_phrase).to eq(true)
   end
 
   xit 'no monkeys' do
-    animals = ["elephant", "hippo", "jaguar", "python"]
+    animals = %w[elephant hippo jaguar python]
     # Your code goes here
     expect(has_monkeys).to eq(false)
   end

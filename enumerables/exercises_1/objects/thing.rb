@@ -7,4 +7,3 @@ class Thing
     @adjective == 'weird'
   end
 end
-

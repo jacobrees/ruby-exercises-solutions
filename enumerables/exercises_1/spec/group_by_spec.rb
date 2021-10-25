@@ -1,10 +1,8 @@
 RSpec.describe 'group by' do
   it 'groups words by length' do
-    words = ["sue", "alice", "steve", "sally", "adam", "fort", "tops", "dog", "cat"]
-    grouped = words.group_by do |word|
-      word.length
-    end
-    expected = {3=>["sue", "dog", "cat"], 4=>["adam", "fort", "tops"], 5=>["alice", "steve", "sally"]}
+    words = %w[sue alice steve sally adam fort tops dog cat]
+    grouped = words.group_by(&:length)
+    expected = { 3 => %w[sue dog cat], 4 => %w[adam fort tops], 5 => %w[alice steve sally] }
     expect(grouped).to eq(expected)
   end
 
@@ -13,35 +11,37 @@ RSpec.describe 'group by' do
     odd_and_even = numbers.group_by do |number|
       # Your code goes here
     end
-    expected = {1=>[1, 1, 3, 5, 13, 21, 55], 0=>[2, 8, 34]}
+    expected = { 1 => [1, 1, 3, 5, 13, 21, 55], 0 => [2, 8, 34] }
     expect(odd_and_even).to eq(expected)
   end
 
   xit 'group by first letter' do
-    words = ["ant", "axis", "albatross", "bolt", "badge", "butter", "car", "cdr", "column"]
+    words = %w[ant axis albatross bolt badge butter car cdr column]
     # Your code goes here
-    expected = {"a"=>["ant", "axis", "albatross"], "b"=>["bolt", "badge", "butter"], "c"=>["car", "cdr", "column"]}
+    expected = { 'a' => %w[ant axis albatross], 'b' => %w[bolt badge butter],
+                 'c' => %w[car cdr column] }
     expect(words_by_first_letter).to eq(expected)
   end
 
   xit 'group by uniqueness' do
-    words = ["one", "two", "one", "TWO", "three", "one", "three", "three", "three"]
+    words = %w[one two one TWO three one three three three]
     # Your code goes here
-    expected = {"one"=>["one", "one", "one"], "two"=>["two", "TWO"], "three"=>["three", "three", "three", "three"]}
+    expected = { 'one' => %w[one one one], 'two' => %w[two TWO],
+                 'three' => %w[three three three three] }
     expect(grouped).to eq(expected)
   end
 
   xit 'grouped by number of zeroes' do
-    numbers = [1, 3, 500, 200, 4000, 3000, 10000, 90, 20, 500000]
+    numbers = [1, 3, 500, 200, 4000, 3000, 10_000, 90, 20, 500_000]
     # Your code goes here
-    expected = {0=>[1, 3], 2=>[500, 200], 3=>[4000, 3000], 4=>[10000], 1=>[90, 20], 5=>[500000]}
+    expected = { 0 => [1, 3], 2 => [500, 200], 3 => [4000, 3000], 4 => [10_000], 1 => [90, 20], 5 => [500_000] }
     expect(grouped).to eq(expected)
   end
 
   xit 'grouped by order of magnitude' do
-    numbers = [1, 3, 503, 239, 4938, 3932, 19982, 93, 21, 501787]
+    numbers = [1, 3, 503, 239, 4938, 3932, 19_982, 93, 21, 501_787]
     # Your code goes here
-    expected = {1=>[1, 3], 2=>[93, 21], 3=>[503, 239], 4=>[4938, 3932], 5=>[19982], 6=>[501787]}
+    expected = { 1 => [1, 3], 2 => [93, 21], 3 => [503, 239], 4 => [4938, 3932], 5 => [19_982], 6 => [501_787] }
     expect(grouped).to eq(expected)
   end
 end

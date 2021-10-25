@@ -20,4 +20,3 @@ RSpec.describe Money do
     expect(money.amount).to eq(33)
   end
 end
-

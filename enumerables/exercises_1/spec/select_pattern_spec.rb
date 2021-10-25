@@ -1,5 +1,4 @@
 RSpec.describe 'select pattern' do
-
   it 'picks even numbers' do
     numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     evens = []
@@ -19,40 +18,40 @@ RSpec.describe 'select pattern' do
   end
 
   xit 'words with three letters' do
-    words = ["pill", "bad", "finger", "cat", "blue", "dog", "table", "red"]
+    words = %w[pill bad finger cat blue dog table red]
     selected = []
     # Your code goes here
-    expect(selected).to eq(["bad", "cat", "dog", "red"])
+    expect(selected).to eq(%w[bad cat dog red])
   end
 
   xit 'words with more than three letters' do
-    words = ["pill", "bad", "finger", "cat", "blue", "dog", "table", "red"]
+    words = %w[pill bad finger cat blue dog table red]
     # Your code goes here
-    expect(selected).to eq(["pill", "finger", "blue", "table"])
+    expect(selected).to eq(%w[pill finger blue table])
   end
 
   xit 'words ending in e' do
-    words = ["are", "you", "strike", "thinking", "belt", "piece", "warble", "sing", "pipe"]
+    words = %w[are you strike thinking belt piece warble sing pipe]
     # Your code goes here
-    expect(selected).to eq(["are", "strike", "piece", "warble", "pipe"])
+    expect(selected).to eq(%w[are strike piece warble pipe])
   end
 
   xit 'words ending in ing' do
-    words = ["bring", "finger", "drought", "singing", "bingo", "purposeful"]
+    words = %w[bring finger drought singing bingo purposeful]
     # Your code goes here
-    expect(selected).to eq(["bring", "singing"])
+    expect(selected).to eq(%w[bring singing])
   end
 
   xit 'words containing e' do
-    words = ["four", "red", "five", "blue", "pizza", "purple"]
+    words = %w[four red five blue pizza purple]
     # Your code goes here
-    expect(selected).to eq(["red", "five", "blue", "purple"])
+    expect(selected).to eq(%w[red five blue purple])
   end
 
   xit 'dinosaurs' do
-    animals = ["tyrannosaurus", "narwhal", "eel", "achillesaurus", "qingxiusaurus"]
+    animals = %w[tyrannosaurus narwhal eel achillesaurus qingxiusaurus]
     # Your code goes here
-    expect(dinosaurs).to eq(["tyrannosaurus", "achillesaurus", "qingxiusaurus"])
+    expect(dinosaurs).to eq(%w[tyrannosaurus achillesaurus qingxiusaurus])
   end
 
   xit 'floats' do
@@ -62,14 +61,14 @@ RSpec.describe 'select pattern' do
   end
 
   xit 'arrays' do
-    elements = ["CAT", ["dog"], 23, [56, 3, 8], "AIMLESS", 43, "butter"]
+    elements = ['CAT', ['dog'], 23, [56, 3, 8], 'AIMLESS', 43, 'butter']
     # Your code goes here
-    expect(arrays).to eq([["dog"], [56, 3, 8]])
+    expect(arrays).to eq([['dog'], [56, 3, 8]])
   end
 
   xit 'hashes' do
-    elements = ["cat", {:dog=>"fido"}, 23, {:stuff=>"things"}, "aimless", 43]
+    elements = ['cat', { dog: 'fido' }, 23, { stuff: 'things' }, 'aimless', 43]
     # Your code goes here
-    expect(hashes).to eq([{:dog=>"fido"}, {:stuff=>"things"}])
+    expect(hashes).to eq([{ dog: 'fido' }, { stuff: 'things' }])
   end
 end

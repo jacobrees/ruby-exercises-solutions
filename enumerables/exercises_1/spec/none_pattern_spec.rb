@@ -1,10 +1,9 @@
 RSpec.describe 'none pattern' do
-
   it 'none are broken' do
-    things = ["functional", "working", "works", "fixed", "good"]
+    things = %w[functional working works fixed good]
     none_broken = true
     things.each do |thing|
-      none_broken = false if thing == "broken"
+      none_broken = false if thing == 'broken'
     end
     expect(none_broken).to eq(true)
   end
@@ -26,13 +25,13 @@ RSpec.describe 'none pattern' do
   end
 
   xit 'none shall pass' do
-    critters = ["elf", "hobbit", "dwarf", "wizard", "human"]
+    critters = %w[elf hobbit dwarf wizard human]
     # Your code goes here
     expect(none_shall_pass).to eq(true)
   end
 
   xit 'one or more shall pass' do
-    phrases = ["go", "left", "can cross", "shall pass", "must stay", "tarried"]
+    phrases = ['go', 'left', 'can cross', 'shall pass', 'must stay', 'tarried']
     # Your code goes here
     expect(none_shall_pass).to eq(false)
   end

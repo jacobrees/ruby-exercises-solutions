@@ -20,7 +20,7 @@ RSpec.describe Candy do
     expect(candy.sugar).to eq(100)
   end
 
-  xit 'can be created with a different amount of sugar'  do
+  xit 'can be created with a different amount of sugar' do
     candy = Candy.new('Pop Rocks', 75)
 
     expect(candy.sugar).to eq(75)

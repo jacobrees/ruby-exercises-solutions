@@ -18,13 +18,13 @@ RSpec.describe TrickOrTreater do
   end
 
   xit 'has an empty bag by default' do
-    trick_or_treater = TrickOrTreater.new(Costume.new("Alien"))
+    trick_or_treater = TrickOrTreater.new(Costume.new('Alien'))
 
     expect(trick_or_treater.bag.empty?).to be true
   end
 
   xit 'has an empty bag, so no candies' do
-    trick_or_treater = TrickOrTreater.new(Costume.new("Knight"))
+    trick_or_treater = TrickOrTreater.new(Costume.new('Knight'))
 
     expect(trick_or_treater.has_candy?).to be false
   end
