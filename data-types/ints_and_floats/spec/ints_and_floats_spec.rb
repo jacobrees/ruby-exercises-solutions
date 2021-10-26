@@ -23,7 +23,7 @@ RSpec.describe 'ints and floats' do
     # Using the two variables defined above,
     # divide unlucky by lucky
     # NOTE: this is integer division
-    quotient = unlucky/lucky
+    quotient = unlucky / lucky
     expect(quotient).to eq(1)
   end
 
@@ -32,7 +32,7 @@ RSpec.describe 'ints and floats' do
     unlucky = 13
     # Using the two variables defined above,
     # divide unlucky by lucky
-    quotient = unlucky.to_f/lucky.to_f
+    quotient = unlucky.to_f / lucky
     expect(quotient).to eq(1.8571428571428572)
   end
 
