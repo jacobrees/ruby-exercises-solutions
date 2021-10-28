@@ -48,11 +48,11 @@ RSpec.describe 'Arrays' do
   it 'test 4' do
     world_cup = %w[Germany Mexico Iceland Portugal]
     # In the line below, add the element "Brazil" to the end of the world_cup array
-    world_cup.push("Brazil")
+    world_cup.push('Brazil')
     expect(world_cup.last).to eq('Brazil')
 
     # Use a different method to add the element "Japan" to the end of the array
-    world_cup.append("Japan")
+    world_cup.append('Japan')
     expect(world_cup.last).to eq('Japan')
   end
 
@@ -69,12 +69,12 @@ RSpec.describe 'Arrays' do
     karaoke = ['Shake it Off', 'Dancing Queen', 'Bohemian Rhapsody']
     # Call a method on the karaoke variable to ask whether "Toxic"
     # is an element or not
-    toxic_in_array = karaoke.include?("Toxic")
+    toxic_in_array = karaoke.include?('Toxic')
     expect(toxic_in_array).to eq(false)
 
     # Now call a method on the karaoke variable to ask whether "Dancing Queen"
     # is an element or not
-    dancing_queen_in_array = karaoke.include?("Dancing Queen")
+    dancing_queen_in_array = karaoke.include?('Dancing Queen')
     expect(dancing_queen_in_array).to eq(true)
   end
 
@@ -83,7 +83,7 @@ RSpec.describe 'Arrays' do
     # Call a method on the band variable to add the element "Vocals"
     # to the beginning of the array
 
-    actual = band.unshift("Vocals")
+    actual = band.unshift('Vocals')
     expect(actual).to eq(%w[Vocals Guitar Drums Bass])
   end
 
@@ -102,7 +102,7 @@ RSpec.describe 'Arrays' do
     expect(some_teams).to eq(%w[Avalanche Nuggets Broncos])
 
     # Now use a different method on the teams variable to get the first and second teams
-    some_teams = teams.values_at(0,1)
+    some_teams = teams.values_at(0, 1)
     expect(some_teams).to eq(%w[Rockies Avalanche])
   end
 
@@ -136,7 +136,7 @@ RSpec.describe 'Arrays' do
   it 'test 13' do
     vowels = %w[a e y i o u y]
     # Call a method on the vowels variable to remove "y"
-    vowels.delete("y")
+    vowels.delete('y')
     expect(vowels).to eq(%w[a e i o u])
   end
 
@@ -144,7 +144,7 @@ RSpec.describe 'Arrays' do
     furniture = %w[couch bed table]
     # Call a method on the furniture variable to add the element
     # "dresser" in between the elements "couch" and "bed"
-    new_furniture = furniture.insert(1, "dresser")
+    new_furniture = furniture.insert(1, 'dresser')
     expect(new_furniture).to eq(%w[couch dresser bed table])
   end
 
