@@ -1,5 +1,5 @@
 RSpec.describe 'Hashes' do
-  it 'test 1' do
+  xit 'test 1' do
     # In the line below, create a new empty hash called empty
     empty = ______
     expect(empty).to eq({})
