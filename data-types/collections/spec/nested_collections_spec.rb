@@ -68,7 +68,7 @@ RSpec.describe 'Nested Collections' do
     }
     # Using the team variable defined above
     # add "Phil" as a pitcher
-    team[:pitchers].push("Phil")
+    team[:pitchers].push('Phil')
 
     expected = {
       pitchers: %w[Kenny Joan Shabaz Phil],
@@ -118,7 +118,7 @@ RSpec.describe 'Nested Collections' do
     }
     # Using the team variable defined above
     # Find out if "Kenny" is a pitcher
-    kenny_is_pitcher = team[:pitchers].include?("Kenny")
+    kenny_is_pitcher = team[:pitchers].include?('Kenny')
     expect(kenny_is_pitcher).to eq(true)
   end
 
@@ -252,7 +252,7 @@ RSpec.describe 'Nested Collections' do
     }
     # Using the three_day_forecast variable defined above,
     # Add a new key "time" with the value "12:30"
-    three_day_forecast['time'] = "12:30"
+    three_day_forecast['time'] = '12:30'
     expected = { 'time' => '12:30',
                  days: [{ high: 70, low: 63, summary: 'Mostly Sunny' }, { high: 55, low: 47, summary: 'Partly Cloudy' }, { high: 77, low: 64, summary: 'Sunny' }], 'date' => '6-21-18', ref_num: 3_456_789_765_456_787_656 }
     expect(three_day_forecast).to eq(expected)
