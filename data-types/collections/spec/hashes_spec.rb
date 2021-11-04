@@ -116,7 +116,7 @@ RSpec.describe 'Hashes' do
     expect(books).to eq(expected)
   end
 
-  xit 'test 10' do
+  it 'test 10' do
     books = {
       John_Steinbeck: 'Grapes of Wrath',
       Harper_Lee: 'To Kill a Mockingbird'
